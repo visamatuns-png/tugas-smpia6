@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Soal interaktif Sistem Pertidaksamaan Dua Variabel Kelas X dari gambar buku.">
+<title>Soal Interaktif Sistem Pertidaksamaan Dua Variabel</title>
+
+<script>
+window.MathJax={
+ loader:{load:['[tex]/ams']},
+ tex:{
+  inlineMath:[['\\(','\\)']],
+  displayMath:[['\\[','\\]']],
+  packages:{'[+]':['ams']},
+  processEscapes:true,
+  processEnvironments:true
+ },
+ chtml:{scale:1,matchFontHeight:true,displayAlign:'center',displayIndent:'0'},
+ options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+:root{
+ --navy:#17315d;--blue:#1f73c9;--cyan:#0891b2;--purple:#7554c7;--green:#159447;
+ --gold:#f2a900;--red:#d9363e;--bg:#f4f8ff;--panel:#fff;--soft:#eaf3ff;
+ --text:#20304b;--muted:#66758c;--border:#d4e1f2;--shadow:0 12px 32px rgba(23,49,93,.11);
+ --side:315px;--top:66px
+}
+[data-theme="dark"]{
+ --navy:#dbeafe;--blue:#8fc7ff;--cyan:#67e8f9;--purple:#c4b5fd;--green:#4ade80;
+ --gold:#fbbf24;--red:#fca5a5;--bg:#081426;--panel:#11223a;--soft:#19314f;
+ --text:#eff6ff;--muted:#b7c8dc;--border:#315071;--shadow:0 12px 32px rgba(0,0,0,.35)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);
+background:radial-gradient(circle at 90% 8%,color-mix(in srgb,var(--purple) 9%,transparent),transparent 25%),linear-gradient(180deg,var(--bg),color-mix(in srgb,var(--bg) 92%,var(--blue) 8%))}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;padding:8px 4px;max-width:100%}
+.topbar{position:fixed;inset:0 0 auto 0;height:var(--top);z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 16px;background:#142b55;color:#fff;box-shadow:0 3px 16px rgba(20,43,85,.35)}
+.brand{text-align:center;font-weight:900}.brand small{display:block;color:#cfe5ff;font-size:.72rem}
+.top-actions{display:flex;gap:7px}.top-btn,.menu-btn{border:0;border-radius:10px;padding:8px 10px;color:#fff;font-weight:800;background:#365682}.top-btn:hover,.menu-btn:hover{filter:brightness(1.12)}
+.save{background:#15803d}.print{background:#7c3aed}.reset{background:#b91c1c}.menu-btn{display:none}
+.layout{display:flex;padding-top:var(--top);min-height:100vh}
+.sidebar{position:fixed;top:var(--top);left:0;bottom:0;width:var(--side);z-index:900;overflow:auto;padding:17px 12px 35px;background:color-mix(in srgb,var(--panel) 96%,transparent);border-right:1px solid var(--border);backdrop-filter:blur(12px)}
+.identity{padding:18px;border-radius:18px;color:#fff;background:linear-gradient(135deg,#17315d,#1f73c9 58%,#7554c7);box-shadow:var(--shadow);margin-bottom:13px}
+.identity small{color:#dbeafe}.identity h2{font-size:1.03rem;margin:5px 0}.identity p{font-size:.8rem;margin:0;color:#dbeafe}
+.progress-card{padding:13px;border:1px solid var(--border);border-radius:14px;background:var(--soft);margin-bottom:12px}
+.progress-head{display:flex;justify-content:space-between;font-size:.82rem;font-weight:850;margin-bottom:7px}
+.track{height:10px;border-radius:99px;background:var(--border);overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--purple),var(--green));transition:.3s}
+.search{width:100%;padding:10px 11px;border:1px solid var(--border);border-radius:11px;background:var(--panel);color:var(--text);margin-bottom:10px}
+.menu{list-style:none;padding:0;margin:0}.menu li{display:flex;justify-content:space-between;gap:9px;padding:10px;border-radius:10px;margin:4px 0;cursor:pointer;font-size:.88rem}.menu li:hover{background:var(--soft)}.menu li.active{background:color-mix(in srgb,var(--blue) 13%,var(--panel));color:var(--blue);font-weight:850}.dot{width:10px;height:10px;border-radius:50%;background:#cbd5e1;align-self:center}.dot.done{background:var(--green);box-shadow:0 0 0 3px color-mix(in srgb,var(--green) 17%,transparent)}
+.main{width:100%;margin-left:var(--side);padding:31px 34px 70px}.content{max-width:1130px;margin:auto}.page{display:none}.page.active{display:block;animation:fade .28s ease}@keyframes fade{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.hero{padding:39px;border-radius:25px;color:#fff;background:radial-gradient(circle at 86% 15%,rgba(103,232,249,.25),transparent 22%),linear-gradient(135deg,#17315d,#1f73c9 55%,#7554c7);box-shadow:var(--shadow);margin-bottom:20px;position:relative;overflow:hidden}.hero:after{content:"≤  ≥  DHP";position:absolute;right:25px;bottom:12px;font:800 2.6rem Georgia,serif;opacity:.16}.hero h1{font-size:clamp(2rem,5vw,3.2rem);margin:10px 0}.hero p{max-width:830px;color:#dbeafe}.chip{display:inline-block;padding:6px 10px;border-radius:99px;background:rgba(255,255,255,.14);margin:3px;font-size:.8rem}
+h1{color:var(--navy);margin:0 0 9px}h2{color:var(--blue);border-bottom:2px solid var(--border);padding-bottom:7px;margin:28px 0 13px}h3{color:var(--navy)}p,li{line-height:1.7}.subtitle{color:var(--muted);margin-top:0}.small{font-size:.85rem}.muted{color:var(--muted)}
+.card,.question,.result,.note,.essay-card,.complex-card,.tf-card,.match-card{padding:18px;border:1px solid var(--border);border-radius:17px;background:var(--panel);margin:14px 0;box-shadow:0 3px 12px rgba(23,49,93,.045)}
+.note{border-left:5px solid var(--gold);border-radius:0 15px 15px 0;background:color-mix(in srgb,var(--gold) 8%,var(--panel))}
+.question.correct,.complex-card.correct,.tf-card.correct,.match-card.correct{border-color:var(--green);box-shadow:inset 5px 0 0 var(--green)}.question.wrong,.complex-card.wrong,.tf-card.wrong,.match-card.wrong{border-color:var(--red);box-shadow:inset 5px 0 0 var(--red)}
+.label{display:inline-block;padding:4px 9px;border-radius:99px;background:color-mix(in srgb,var(--blue) 13%,var(--panel));color:var(--blue);font-size:.73rem;font-weight:900}.label.warn{background:color-mix(in srgb,var(--gold) 17%,var(--panel));color:#946000}.label.essay{background:color-mix(in srgb,var(--purple) 14%,var(--panel));color:var(--purple)}
+.option{display:block;padding:9px 11px;border:1px solid var(--border);border-radius:10px;margin:7px 0;cursor:pointer}.option:hover{background:var(--soft)}.option input{margin-right:8px}
+.feedback{display:none;padding:12px;border-radius:11px;margin-top:10px}.feedback.show{display:block}.feedback.good{background:color-mix(in srgb,var(--green) 12%,var(--panel));color:var(--green);border:1px solid color-mix(in srgb,var(--green) 50%,var(--border))}.feedback.bad{background:color-mix(in srgb,var(--red) 10%,var(--panel));color:var(--red);border:1px solid color-mix(in srgb,var(--red) 48%,var(--border))}.feedback.info{background:var(--soft);border:1px solid var(--border)}
+.btn{border:0;border-radius:10px;padding:10px 14px;background:var(--blue);color:#fff;font-weight:850}.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}.btn.green{background:var(--green)}.btn.gold{background:var(--gold);color:#392900}.btn.purple{background:var(--purple)}.btn.light{background:var(--soft);color:var(--text);border:1px solid var(--border)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.page-nav{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:30px;padding-top:18px;border-top:1px solid var(--border)}
+.grid{display:grid;gap:14px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.stat{padding:14px;text-align:center;background:var(--soft);border-radius:13px}.stat strong{display:block;font-size:1.5rem;color:var(--blue)}
+.score-layout{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center}.ring{width:135px;height:135px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--blue) 0deg,var(--border) 0deg);position:relative}.ring:after{content:"";position:absolute;width:98px;height:98px;border-radius:50%;background:var(--panel)}.ring strong{z-index:1;font-size:1.55rem;color:var(--navy)}
+input[type="text"],select,textarea{width:100%;padding:10px 11px;border:1px solid var(--border);border-radius:10px;background:var(--panel);color:var(--text)}textarea{min-height:120px;resize:vertical}
+.graph-box{padding:9px;border:1px solid var(--border);border-radius:14px;background:#fff;margin:12px 0}.graph-box canvas{width:100%;height:360px;display:block}.graph-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.graph-option{padding:8px;border:1px solid var(--border);border-radius:13px;background:#fff;color:#17315d}.graph-option canvas{display:block;width:100%;height:225px}.graph-option input{margin:7px}
+.match-row{display:grid;grid-template-columns:1.2fr .8fr;gap:10px;align-items:center;margin:9px 0;padding:9px;border:1px solid var(--border);border-radius:10px}
+.tf-row{display:grid;grid-template-columns:1fr 90px 90px;gap:8px;align-items:center;border-bottom:1px solid var(--border);padding:10px}.tf-head{font-weight:900;background:var(--soft);border-radius:10px}
+.slider-grid{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.slider-grid input{width:100%}
+details{border:1px solid var(--border);border-radius:13px;margin:10px 0;overflow:hidden}summary{padding:12px 15px;background:var(--soft);cursor:pointer;font-weight:850}details>div{padding:14px}
+.toast{position:fixed;right:18px;bottom:18px;padding:12px 15px;border-radius:10px;background:#142b55;color:#fff;opacity:0;transform:translateY(12px);transition:.25s;z-index:1200}.toast.show{opacity:1;transform:none}
+@media(max-width:930px){.menu-btn{display:block}.sidebar{left:calc(-1 * var(--side) - 20px);transition:.25s}.sidebar.open{left:0;box-shadow:20px 0 40px rgba(0,0,0,.28)}.main{margin-left:0;padding:24px 16px 60px}.topbar{height:auto;min-height:var(--top);flex-wrap:wrap}.brand{flex:1}.layout{padding-top:82px}.sidebar{top:82px}}
+@media(max-width:680px){.top-actions{width:100%;overflow:auto}.layout{padding-top:124px}.sidebar{top:124px}.grid-2,.grid-3,.score-layout,.graph-options{grid-template-columns:1fr}.tf-row{grid-template-columns:1fr 65px 65px}.match-row{grid-template-columns:1fr}.main{padding:18px 10px 50px}.hero{padding:27px 20px}.hero:after{display:none}}
+@media print{.topbar,.sidebar,.btn,.actions,.page-nav,.screen-only{display:none!important}.layout{padding:0}.main{margin:0;padding:0}.content{max-width:none}.page{display:block!important;page-break-after:always}.question,.card,.essay-card,.complex-card,.tf-card,.match-card{box-shadow:none;break-inside:avoid}details>div{display:block!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <button class="menu-btn" id="menuBtn">☰</button>
+ <div class="brand">Soal Interaktif Sistem Pertidaksamaan<small>Matematika Kelas X Semester 1</small></div>
+ <div class="top-actions">
+  <button class="top-btn save" onclick="saveAll()">Simpan</button>
+  <button class="top-btn" onclick="loadAll(true)">Muat</button>
+  <button class="top-btn print" onclick="window.print()">Cetak/PDF</button>
+  <button class="top-btn" onclick="toggleTheme()">Mode</button>
+  <button class="top-btn reset" onclick="resetAll()">Reset</button>
+ </div>
+</header>
+
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+ <div class="identity"><small>SMA Islam Al Azhar</small><h2>Evaluasi Pertidaksamaan Dua Variabel</h2><p>Grafik digambar ulang secara dinamis</p></div>
+ <div class="progress-card"><div class="progress-head"><span>Progress bagian</span><span id="progressPct">0%</span></div><div class="track"><div class="fill" id="progressFill"></div></div><p class="small muted" id="progressText">0 dari 7 bagian selesai</p></div>
+ <input class="search" id="searchMenu" placeholder="Cari grafik, esai, peluru..." oninput="filterMenu()">
+ <ul class="menu">
+  <li class="active" data-keywords="beranda petunjuk" onclick="showPage('home')"><span>⌂ Beranda</span><span class="dot" id="dot-home"></span></li>
+  <li data-keywords="pilihan ganda grafik 1 10" onclick="showPage('mcq')"><span>Ⅰ. Pilihan Ganda 1–10</span><span class="dot" id="dot-mcq"></span></li>
+  <li data-keywords="esai daerah penyelesaian 1a 1b 1c" onclick="showPage('essay')"><span>Ⅱ. Esai Grafik</span><span class="dot" id="dot-essay"></span></li>
+  <li data-keywords="pilihan kompleks titik puncak" onclick="showPage('multi')"><span>Ⅲ. Pilihan Majemuk</span><span class="dot" id="dot-multi"></span></li>
+  <li data-keywords="menjodohkan peluru parabola" onclick="showPage('matching')"><span>Ⅳ. Menjodohkan Peluru</span><span class="dot" id="dot-matching"></span></li>
+  <li data-keywords="benar salah fungsi pertidaksamaan" onclick="showPage('tf')"><span>Ⅴ. Benar–Salah</span><span class="dot" id="dot-tf"></span></li>
+  <li data-keywords="rekap proyek peta pikiran" onclick="showPage('results')"><span>✓ Rekap & Proyek</span><span class="dot" id="dot-results"></span></li>
+ </ul>
+</aside>
+
+<main class="main"><div class="content">
+
+<section class="page active" id="home">
+ <div class="hero">
+  <span class="chip">MathJax 3</span><span class="chip">Canvas interaktif</span><span class="chip">Skor otomatis</span>
+  <h1>Evaluasi Sistem Pertidaksamaan Dua Variabel</h1>
+  <p>Seluruh soal dari enam gambar telah diketik ulang. Grafik garis, parabola, daerah arsiran, dan diagram wilayah dibuat ulang menggunakan Canvas sehingga tetap tajam pada komputer maupun ponsel.</p>
+ </div>
+ <div class="note">
+  <h3>Catatan sumber</h3>
+  <p>Nomor 1 tidak mencetak tanda pertidaksamaan dan ruas kanan setelah \(3x-4y\), sehingga tidak dinilai otomatis. Pada soal menjodohkan peluru, tinggi maksimum yang benar adalah \(\frac{529}{15}\) meter, tetapi nilai tersebut tidak tersedia pada daftar jawaban buku; opsi koreksi ditambahkan.</p>
+ </div>
+ <div class="grid grid-3">
+  <div class="card"><h3>10 Pilihan Ganda</h3><p>Grafik linear, daerah bernomor, parabola, irisan dua kurva, dan aplikasi kecepatan.</p></div>
+  <div class="card"><h3>Esai & Majemuk</h3><p>Tiga esai grafik dan satu soal pilihan majemuk tentang titik serta karakteristik kurva.</p></div>
+  <div class="card"><h3>Peluru & Benar–Salah</h3><p>Menjodohkan nilai fungsi kuadrat, simulator gerak peluru, dan delapan pernyataan benar–salah.</p></div>
+ </div>
+ <h2>Petunjuk</h2>
+ <ol class="card">
+  <li>Pilih jawaban pada setiap soal dan tekan tombol nilai pada akhir bagian.</li>
+  <li>Pada soal esai, tulis alasan dan sketsa terlebih dahulu sebelum membuka grafik pembahasan.</li>
+  <li>Daerah berwarna ungu pada grafik merupakan daerah yang sedang diarsir.</li>
+  <li>Gunakan tombol Simpan untuk menyimpan jawaban di perangkat.</li>
+  <li>Koneksi internet diperlukan ketika pustaka MathJax pertama kali dimuat.</li>
+ </ol>
+ <div class="page-nav"><span></span><button class="btn green" onclick="completeSection('home')">Tandai Selesai ✓</button><button class="btn" onclick="showPage('mcq')">Mulai Soal →</button></div>
+</section>
+
+<section class="page" id="mcq">
+ <span class="label">Bagian I</span><h1>Pilihan Ganda Nomor 1–10</h1>
+ <p class="subtitle">Grafik dirender secara dinamis. Nomor 1 tidak dihitung karena teks sumber tidak lengkap.</p>
+ <div id="mcqRoot"></div>
+ <div class="actions"><button class="btn gold" onclick="gradeMCQ()">Nilai Pilihan Ganda</button><button class="btn light" onclick="clearRoot('mcqRoot')">Bersihkan Jawaban</button></div>
+ <div class="result" id="mcqResult">Hasil pilihan ganda akan muncul di sini.</div>
+ <div class="page-nav"><button class="btn light" onclick="showPage('home')">← Beranda</button><button class="btn green" onclick="completeSection('mcq')">Tandai Selesai ✓</button><button class="btn" onclick="showPage('essay')">Esai →</button></div>
+</section>
+
+<section class="page" id="essay">
+ <span class="label essay">Bagian II</span><h1>Esai Daerah Penyelesaian</h1>
+ <p class="subtitle">Kerjakan sketsa dan alasan terlebih dahulu. Grafik pembahasan dapat dibuka setelahnya.</p>
+ <div id="essayRoot"></div>
+ <div class="page-nav"><button class="btn light" onclick="showPage('mcq')">← Pilihan Ganda</button><button class="btn green" onclick="completeSection('essay')">Tandai Selesai ✓</button><button class="btn" onclick="showPage('multi')">Pilihan Majemuk →</button></div>
+</section>
+
+<section class="page" id="multi">
+ <span class="label">Bagian III</span><h1>Pilihan Majemuk</h1>
+ <div id="multiRoot"></div>
+ <div class="actions"><button class="btn gold" onclick="gradeMulti()">Nilai Pilihan Majemuk</button></div>
+ <div class="result" id="multiResult">Hasil akan muncul di sini.</div>
+ <div class="page-nav"><button class="btn light" onclick="showPage('essay')">← Esai</button><button class="btn green" onclick="completeSection('multi')">Tandai Selesai ✓</button><button class="btn" onclick="showPage('matching')">Menjodohkan →</button></div>
+</section>
+
+<section class="page" id="matching">
+ <span class="label">Bagian IV</span><h1>Gerak Peluru dan Menjodohkan</h1>
+ <div class="card">
+  <h3>Simulator \(h(t)=-15t^2+44t+3\)</h3>
+  <div class="slider-grid"><input type="range" id="timeSlider" min="0" max="3" step="0.05" value="1"><strong id="timeValue">1,00 s</strong></div>
+  <div class="graph-box"><canvas id="projectileCanvas" width="900" height="390"></canvas></div>
+  <div class="result" id="projectileValue">Tinggi akan muncul di sini.</div>
+ </div>
+ <div id="matchingRoot"></div>
+ <div class="actions"><button class="btn gold" onclick="gradeMatching()">Nilai Menjodohkan</button></div>
+ <div class="result" id="matchingResult">Hasil menjodohkan akan muncul di sini.</div>
+ <div class="page-nav"><button class="btn light" onclick="showPage('multi')">← Pilihan Majemuk</button><button class="btn green" onclick="completeSection('matching')">Tandai Selesai ✓</button><button class="btn" onclick="showPage('tf')">Benar–Salah →</button></div>
+</section>
+
+<section class="page" id="tf">
+ <span class="label">Bagian V</span><h1>Benar atau Salah</h1>
+ <div id="tfRoot"></div>
+ <div class="actions"><button class="btn gold" onclick="gradeTF()">Nilai Benar–Salah</button></div>
+ <div class="result" id="tfResult">Hasil benar–salah akan muncul di sini.</div>
+ <div class="page-nav"><button class="btn light" onclick="showPage('matching')">← Menjodohkan</button><button class="btn green" onclick="completeSection('tf')">Tandai Selesai ✓</button><button class="btn" onclick="showPage('results')">Rekap & Proyek →</button></div>
+</section>
+
+<section class="page" id="results">
+ <span class="label">Rekap</span><h1>Rekap Hasil dan Tugas Proyek</h1>
+ <div class="card">
+  <div class="score-layout">
+   <div class="ring" id="scoreRing"><strong id="totalScore">0</strong></div>
+   <div>
+    <h3 id="scoreTitle">Belum lengkap</h3>
+    <p id="scoreMessage">Nilai setiap bagian objektif untuk melihat rekap.</p>
+    <div class="grid grid-3">
+     <div class="stat"><span>Benar</span><strong id="totalCorrect">0</strong></div>
+     <div class="stat"><span>Dinilai</span><strong id="totalGraded">0</strong></div>
+     <div class="stat"><span>Bagian</span><strong id="gradedParts">0/4</strong></div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="grid grid-2">
+  <div class="card"><h3>Pilihan Ganda</h3><p id="recapMCQ">Belum dinilai.</p></div>
+  <div class="card"><h3>Pilihan Majemuk</h3><p id="recapMulti">Belum dinilai.</p></div>
+  <div class="card"><h3>Menjodohkan</h3><p id="recapMatching">Belum dinilai.</p></div>
+  <div class="card"><h3>Benar–Salah</h3><p id="recapTF">Belum dinilai.</p></div>
+ </div>
+ <div class="card">
+  <span class="label essay">Tugas Proyek</span><h3>Peta Pikiran Sistem Pertidaksamaan Linear Dua Variabel</h3>
+  <p>Bersama kelompok beranggotakan 3–4 orang, buatlah peta pikiran mengenai konsep Sistem Pertidaksamaan Linear Dua Variabel pada satu lembar kertas karton.</p>
+  <label><strong>Rencana dan pembagian tugas</strong><textarea id="projectPlan" placeholder="Tuliskan rencana kelompok..."></textarea></label>
+  <label><strong>Hasil dan refleksi</strong><textarea id="projectResult" placeholder="Tuliskan hasil dan refleksi..."></textarea></label>
+ </div>
+ <div class="page-nav"><button class="btn light" onclick="showPage('tf')">← Benar–Salah</button><button class="btn green" onclick="completeSection('results')">Tandai Selesai ✓</button><button class="btn" onclick="showPage('home')">Kembali ke Awal</button></div>
+</section>
+
+</div></main></div>
+<div class="toast" id="toast">Tersimpan</div>
+
+<script>
+const mcqData=[{"n":1,"type":"graph5-incomplete","q":"Daerah pertidaksamaan berikut yang memenuhi \\(3x-4y\\) adalah ...","e":"Pada gambar sumber, tanda pertidaksamaan dan ruas kanan setelah \\(3x-4y\\) tidak tercetak. Semua pilihan grafik tetap ditampilkan, tetapi nomor ini tidak dihitung dalam skor otomatis."},{"n":2,"type":"region-a","q":"Pada gambar, daerah yang merupakan himpunan penyelesaian sistem \\(\\begin{cases}2x+y\\le24\\\\x+2y\\ge12\\\\x-y\\ge-2\\end{cases}\\) adalah ...","o":["I","II","III","IV","V"],"a":2,"e":"Daerah harus berada di bawah \\(2x+y=24\\), di atas \\(x+2y=12\\), dan di bawah \\(y=x+2\\). Irisannya adalah daerah III."},{"n":3,"type":"region-b","q":"Daerah himpunan penyelesaian sistem \\(\\begin{cases}x+y\\le6\\\\x+2y\\le10\\\\2x+y\\ge10\\\\x\\ge0\\\\y\\ge0\\end{cases}\\) adalah ...","o":["I","II","III","IV","V"],"a":0,"e":"Irisannya berupa segitiga yang dibatasi \\(x+y=6\\), \\(x+2y=10\\), dan \\(2x+y=10\\), yaitu daerah I."},{"n":4,"type":"region-a","q":"Pada gambar, daerah yang merupakan himpunan penyelesaian sistem \\(\\begin{cases}2x+y\\le24\\\\x+2y\\ge12\\\\x-y\\ge-2\\end{cases}\\) adalah ...","o":["I","II","III","IV","V"],"a":2,"e":"Sama seperti nomor 2, daerah penyelesaiannya adalah III."},{"n":5,"type":"region-b","q":"Daerah himpunan penyelesaian sistem \\(\\begin{cases}x+y\\le6\\\\x+2y\\le10\\\\2x+y\\ge10\\\\x\\ge0\\\\y\\ge0\\end{cases}\\) adalah ...","o":["I","II","III","IV","V"],"a":0,"e":"Sama seperti nomor 3, daerah penyelesaiannya adalah I."},{"n":6,"type":"single-graph","graph":"q6","q":"Daerah yang diarsir pada grafik menunjukkan daerah penyelesaian ...","o":["\\(y\\ge -x^2+2x+3\\)","\\(y\\ge x^2+2x+3\\)","\\(y\\le -x^2+2x+3\\)","\\(y\\le x^2+2x+3\\)","\\(y\\le -x^2-2x+3\\)"],"a":2,"e":"Parabola membuka ke bawah, berpusat di sekitar \\((1,4)\\), dan daerah diarsir berada di bawah kurva. Jadi \\(y\\le -x^2+2x+3\\)."},{"n":7,"type":"single-graph","graph":"q7","q":"Daerah yang diarsir tebal pada grafik menunjukkan daerah penyelesaian ...","o":["\\(\\begin{cases}y<x^2+4x-3\\\\3x-2y\\le-6\\end{cases}\\)","\\(\\begin{cases}y<x^2-4x-3\\\\3x-2y\\le-6\\end{cases}\\)","\\(\\begin{cases}y<x^2-4x+3\\\\3x-2y\\le-6\\end{cases}\\)","\\(\\begin{cases}y<x^2+4x+3\\\\3x-2y\\le-6\\end{cases}\\)","\\(\\begin{cases}y<x^2-4x-3\\\\3x-2y\\le6\\end{cases}\\)"],"a":2,"e":"Parabola adalah \\(y=x^2-4x+3\\). Garis \\(3x-2y=-6\\) setara dengan \\(y=\\frac32x+3\\). DHP berada di bawah parabola dan di atas garis."},{"n":8,"type":"single-graph","graph":"q8","q":"Daerah yang diarsir tebal pada grafik menunjukkan daerah penyelesaian ...","o":["\\(\\begin{cases}y>x^2+3x\\\\y<6x-x^2\\end{cases}\\)","\\(\\begin{cases}y<x^2+3x\\\\y<6x-x^2\\end{cases}\\)","\\(\\begin{cases}y>-x^2-3x\\\\y<6x-x^2\\end{cases}\\)","\\(\\begin{cases}y>-x^2+3x\\\\y<6x-x^2\\end{cases}\\)","\\(\\begin{cases}y>x^2-3x\\\\y<6x-x^2\\end{cases}\\)"],"a":4,"e":"Daerah berada di atas parabola \\(y=x^2-3x\\) dan di bawah parabola \\(y=6x-x^2\\)."},{"n":9,"type":"text","q":"Sebuah roket bergerak dari keadaan diam. Kecepatan setelah \\(t\\) menit memenuhi \\(V(t)=-\\frac1{30}(t^2-120t)\\) km/menit. Roket berada pada kecepatan lebih dari \\(66\\frac23\\) km/menit pada saat ...","o":["sama dengan 80 menit","sama dengan 100 menit","lebih dari 20 menit dan kurang dari 80 menit","lebih dari 20 menit dan kurang dari 100 menit","lebih dari 80 menit dan kurang dari 100 menit"],"a":3,"e":"\\(-\\frac1{30}(t^2-120t)>\\frac{200}{3}\\) setara dengan \\((t-20)(t-100)<0\\), sehingga \\(20<t<100\\)."},{"n":10,"type":"graph5-q10","q":"Grafik yang memuat daerah himpunan penyelesaian sistem \\(\\begin{cases}y\\ge x^2+3x-5\\\\y>-x^2-2x+3\\end{cases}\\) adalah ...","a":0,"e":"Daerah penyelesaian harus berada di atas kedua parabola. Pada selang di antara titik potong, batas atas yang dominan adalah parabola terbuka ke bawah; di luar selang tersebut batas dominan adalah parabola terbuka ke atas."}];
+const essayData=[{"id":"1a","q":"Tentukan daerah penyelesaian \\(\\begin{cases}y\\ge x^2\\\\y\\le x+2\\end{cases}\\).","graph":"essay-a","ans":"Titik potong diperoleh dari \\(x^2=x+2\\), yaitu \\(x=-1\\) dan \\(x=2\\). Daerah penyelesaian berada di atas \\(y=x^2\\) dan di bawah \\(y=x+2\\), untuk \\(-1\\le x\\le2\\)."},{"id":"1b","q":"Tentukan daerah penyelesaian \\(\\begin{cases}y\\ge x^2+6x+5\\\\y\\ge2x+8\\end{cases}\\).","graph":"essay-b","ans":"Daerah penyelesaian adalah seluruh titik yang berada di atas kedua grafik, yakni di atas selubung atas dari parabola \\(y=x^2+6x+5\\) dan garis \\(y=2x+8\\)."},{"id":"1c","q":"Tentukan daerah penyelesaian \\(\\begin{cases}y\\ge x^2+2x-15\\\\y\\le-x^2+2x+8\\end{cases}\\).","graph":"essay-c","ans":"Daerah berada di atas parabola \\(y=x^2+2x-15\\) dan di bawah \\(y=-x^2+2x+8\\). Kedua kurva berpotongan saat \\(2x^2=23\\), yaitu \\(x=\\pm\\sqrt{\\frac{23}{2}}\\)."}];
+const multiData={"q":"Untuk sistem \\(\\begin{cases}y\\le x-3\\\\y\\ge x^2-3x-2\\end{cases}\\), pilih semua pernyataan yang benar.","o":["Titik \\((0,0)\\) tidak termasuk dalam himpunan penyelesaian.","Titik \\((2,-2)\\) termasuk dalam himpunan penyelesaian.","Titik \\((0,-3)\\) merupakan titik potong pada sumbu \\(X\\) untuk pertidaksamaan I.","Titik \\((0,-2)\\) merupakan titik potong pada sumbu \\(X\\) untuk pertidaksamaan II.","Titik puncak pertidaksamaan II adalah \\(\\left(\\frac32,-4\\frac14\\right)\\)."],"a":[0,1,4],"e":"\\((0,0)\\) gagal memenuhi \\(y\\le x-3\\); \\((2,-2)\\) memenuhi kedua pertidaksamaan; titik potong sumbu \\(X\\) garis I adalah \\((3,0)\\); \\((0,-2)\\) adalah titik potong sumbu \\(Y\\) parabola; titik puncaknya \\(\\left(\\frac32,-\\frac{17}{4}\\right)\\)."};
+const matchingData={"q":"Diketahui \\(h(t)=-15t^2+44t+3\\). Pasangkan setiap pernyataan dengan nilai yang benar.","rows":["Tinggi maksimum peluru","Tinggi peluru saat \\(t=\\frac12\\) detik","Tinggi peluru saat \\(t=1\\) detik","Tinggi peluru saat \\(t=2\\) detik","Tinggi peluru saat \\(t=2{,}5\\) detik"],"options":["\\(\\frac{77}{4}\\) meter","\\(\\frac{85}{4}\\) meter","\\(31\\) meter","\\(32\\) meter","\\(34\\) meter","\\(\\frac{22}{7}\\) meter","\\(\\frac{529}{15}\\) meter — hasil perhitungan tepat"],"a":[6,1,3,2,0],"e":"Titik puncak terjadi saat \\(t=\\frac{22}{15}\\), dengan \\(h_{\\max}=\\frac{529}{15}\\) meter. Nilai maksimum tepat tersebut tidak tercantum pada daftar jawaban di buku, sehingga ditambahkan sebagai opsi koreksi. Nilai lainnya: \\(h(\\frac12)=\\frac{85}{4}\\), \\(h(1)=32\\), \\(h(2)=31\\), dan \\(h(2{,}5)=\\frac{77}{4}\\)."};
+const tfGroups=[{"title":"Benar–Salah untuk \\(h(t)=5+20t-\\frac54t^2\\)","items":[{"id":"A","text":"Tinggi maksimum peluru adalah 85 meter.","a":true,"e":"Titik puncak terjadi pada \\(t=8\\), dan \\(h(8)=85\\)."},{"id":"B","text":"Selisih tinggi pada saat \\(t=2\\) detik dan \\(t=4\\) detik adalah 25 meter.","a":true,"e":"\\(h(2)=40\\) dan \\(h(4)=65\\), selisihnya 25."},{"id":"C","text":"Tinggi maksimum dicapai pada saat \\(t=8\\) detik.","a":true,"e":"\\(t_p=-\\frac{b}{2a}=8\\)."}]},{"title":"Benar–Salah untuk \\(\\begin{cases}y\\ge x^2-2x-15\\\\2x-3y\\ge6\\end{cases}\\)","items":[{"id":"A","text":"Titik puncak pertidaksamaan I berada di titik \\((1,-16)\\).","a":true,"e":"Parabola \\(y=x^2-2x-15=(x-1)^2-16\\)."},{"id":"B","text":"Titik potong pertidaksamaan I dengan sumbu \\(Y\\) berada di titik \\((0,15)\\).","a":false,"e":"Untuk \\(x=0\\), diperoleh \\(y=-15\\), jadi titiknya \\((0,-15)\\)."},{"id":"C","text":"Titik potong pertidaksamaan II dengan sumbu \\(X\\) berada di titik \\((3,0)\\).","a":true,"e":"Pada \\(y=0\\), persamaan batas \\(2x-3y=6\\) memberi \\(x=3\\)."},{"id":"D","text":"Titik \\((0,0)\\) berada di daerah himpunan penyelesaian kedua pertidaksamaan.","a":false,"e":"Titik tersebut memenuhi pertidaksamaan I, tetapi tidak memenuhi \\(2x-3y\\ge6\\)."},{"id":"E","text":"Daerah himpunan penyelesaian pertidaksamaan II berada di bawah garis.","a":true,"e":"\\(2x-3y\\ge6\\) setara dengan \\(y\\le\\frac23x-2\\)."}]}];
+
+const sectionIds=['home','mcq','essay','multi','matching','tf','results'];
+let completed=[];
+let scores={mcq:null,multi:null,matching:null,tf:null};
+
+function $(id){return document.getElementById(id)}
+function typeset(el){if(window.MathJax&&window.MathJax.typesetPromise){MathJax.typesetPromise(el?[el]:undefined).catch(()=>{})}}
+function toast(t){const e=$('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1700)}
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ $(id).classList.add('active');
+ document.querySelectorAll('.menu li').forEach(i=>i.classList.remove('active'));
+ const item=[...document.querySelectorAll('.menu li')].find(i=>i.getAttribute('onclick')===`showPage('${id}')`);
+ if(item)item.classList.add('active');
+ $('sidebar').classList.remove('open');
+ window.scrollTo({top:0,behavior:'smooth'});
+ setTimeout(()=>{typeset($(id));drawVisibleGraphs();},60);
+}
+function completeSection(id){if(!completed.includes(id))completed.push(id);updateProgress();saveAll(false);toast('Bagian ditandai selesai')}
+function updateProgress(){
+ sectionIds.forEach(id=>{const d=$('dot-'+id);if(d)d.classList.toggle('done',completed.includes(id))});
+ const pct=Math.round(completed.length/sectionIds.length*100);
+ $('progressFill').style.width=pct+'%';$('progressPct').textContent=pct+'%';
+ $('progressText').textContent=`${completed.length} dari ${sectionIds.length} bagian selesai`;
+}
+$('menuBtn').addEventListener('click',()=>$('sidebar').classList.toggle('open'));
+function filterMenu(){const q=$('searchMenu').value.toLowerCase();document.querySelectorAll('.menu li').forEach(i=>{const t=(i.textContent+' '+(i.dataset.keywords||'')).toLowerCase();i.style.display=t.includes(q)?'flex':'none'})}
+function toggleTheme(){document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';saveAll(false);drawVisibleGraphs()}
+
+// ---------------- GRAPH ENGINE ----------------
+function graphSetup(canvas,range){
+ const ctx=canvas.getContext('2d'),dpr=window.devicePixelRatio||1,w=canvas.clientWidth||520,h=parseFloat(getComputedStyle(canvas).height)||300;
+ canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+ const [xmin,xmax,ymin,ymax]=range,pad=30;
+ const X=x=>pad+(x-xmin)/(xmax-xmin)*(w-2*pad);
+ const Y=y=>h-pad-(y-ymin)/(ymax-ymin)*(h-2*pad);
+ const invX=px=>xmin+(px-pad)/(w-2*pad)*(xmax-xmin);
+ const invY=py=>ymin+(h-pad-py)/(h-2*pad)*(ymax-ymin);
+ ctx.fillStyle='#ffffff';ctx.fillRect(0,0,w,h);
+ return{ctx,w,h,pad,xmin,xmax,ymin,ymax,X,Y,invX,invY};
+}
+function shade(g,predicate,color='rgba(117,84,199,.48)'){
+ const {ctx,w,h,pad,invX,invY}=g;ctx.fillStyle=color;
+ const step=4;
+ for(let py=pad;py<h-pad;py+=step){
+  const y=invY(py);
+  for(let px=pad;px<w-pad;px+=step){
+   const x=invX(px);
+   if(predicate(x,y))ctx.fillRect(px,py,step+1,step+1);
+  }
+ }
+}
+function grid(g){
+ const {ctx,w,h,pad,xmin,xmax,ymin,ymax,X,Y}=g;
+ ctx.lineWidth=1;ctx.strokeStyle='#e2e8f0';ctx.font='10px sans-serif';ctx.fillStyle='#475569';
+ for(let x=Math.ceil(xmin);x<=Math.floor(xmax);x++){ctx.beginPath();ctx.moveTo(X(x),pad);ctx.lineTo(X(x),h-pad);ctx.stroke();if(x!==0)ctx.fillText(String(x),X(x)-3,Y(0)+13)}
+ for(let y=Math.ceil(ymin);y<=Math.floor(ymax);y++){ctx.beginPath();ctx.moveTo(pad,Y(y));ctx.lineTo(w-pad,Y(y));ctx.stroke();if(y!==0)ctx.fillText(String(y),X(0)+5,Y(y)+3)}
+ ctx.strokeStyle='#334155';ctx.lineWidth=1.8;
+ ctx.beginPath();ctx.moveTo(pad,Y(0));ctx.lineTo(w-pad,Y(0));ctx.stroke();
+ ctx.beginPath();ctx.moveTo(X(0),pad);ctx.lineTo(X(0),h-pad);ctx.stroke();
+ ctx.fillText('x',w-pad-9,Y(0)-6);ctx.fillText('y',X(0)+7,pad+11);
+}
+function curve(g,fn,color='#244b80',dashed=false,width=2.4){
+ const {ctx,X,Y,xmin,xmax}=g;ctx.save();ctx.strokeStyle=color;ctx.lineWidth=width;if(dashed)ctx.setLineDash([7,5]);
+ ctx.beginPath();let begun=false;
+ for(let i=0;i<=900;i++){const x=xmin+(xmax-xmin)*i/900,y=fn(x),px=X(x),py=Y(y);if(Number.isFinite(py)&&py>-3000&&py<3000){if(!begun){ctx.moveTo(px,py);begun=true}else ctx.lineTo(px,py)}}
+ ctx.stroke();ctx.restore();
+}
+function textLabel(g,text,x,y){g.ctx.fillStyle='#4c1d95';g.ctx.font='bold 13px sans-serif';g.ctx.fillText(text,g.X(x),g.Y(y))}
+function drawQ1Option(c,opt){
+ const g=graphSetup(c,[-6,6,-5,5]);
+ const configs=[
+  {f:x=>.75*x+4, pred:(x,y)=>y<=.75*x+4},
+  {f:x=>.75*x-3, pred:(x,y)=>y>=.75*x-3},
+  {f:x=>1.25*x-4.5, pred:(x,y)=>y>=1.25*x-4.5},
+  {f:x=>-.75*x-2, pred:(x,y)=>y>=-.75*x-2},
+  {f:x=>-.75*x-1, pred:(x,y)=>y>=-.75*x-1}
+ ];
+ shade(g,configs[opt].pred);grid(g);curve(g,configs[opt].f);
+}
+function drawRegionA(c){
+ const g=graphSetup(c,[-2,13,-1,25]);grid(g);
+ curve(g,x=>24-2*x);curve(g,x=>6-.5*x);curve(g,x=>x+2);
+ textLabel(g,'I',1.3,8);textLabel(g,'II',.5,3.2);textLabel(g,'III',6.2,4.2);textLabel(g,'IV',4.2,1);textLabel(g,'V',7.2,13);
+}
+function drawRegionB(c){
+ const g=graphSetup(c,[-1,11,-1,11]);grid(g);
+ curve(g,x=>6-x);curve(g,x=>5-.5*x);curve(g,x=>10-2*x);
+ textLabel(g,'I',3.2,3.15);textLabel(g,'II',.3,5.35);textLabel(g,'III',.5,7.1);textLabel(g,'IV',6.8,1.7);textLabel(g,'V',4.8,.25);
+}
+function drawQ6(c){
+ const g=graphSetup(c,[-5,6,-5,6]);shade(g,(x,y)=>y<=-x*x+2*x+3);grid(g);curve(g,x=>-x*x+2*x+3);
+}
+function drawQ7(c){
+ const g=graphSetup(c,[-5,7,-3,9]);shade(g,(x,y)=>y<x*x-4*x+3&&y>=1.5*x+3);grid(g);
+ curve(g,x=>x*x-4*x+3);curve(g,x=>1.5*x+3);textLabel(g,'DHP',-2,4.5);
+}
+function drawQ8(c){
+ const g=graphSetup(c,[-2,8,-4,11]);shade(g,(x,y)=>y>x*x-3*x&&y<6*x-x*x);grid(g);
+ curve(g,x=>x*x-3*x);curve(g,x=>6*x-x*x);textLabel(g,'DHP',2.6,3.5);
+}
+function drawQ10Option(c,opt){
+ const g=graphSetup(c,[-6,5,-9,7]);
+ const U=x=>x*x+3*x-5,D=x=>-x*x-2*x+3;
+ const predicates=[
+  (x,y)=>y>=U(x)&&y>D(x),
+  (x,y)=>y>=U(x)&&y<=D(x),
+  (x,y)=>y<=U(x)&&y<=D(x),
+  (x,y)=>y<=U(x)&&y>=D(x),
+  (x,y)=>y>=U(x)||y>D(x)
+ ];
+ shade(g,predicates[opt]);grid(g);curve(g,U);curve(g,D);
+}
+function drawEssay(c,type){
+ let range=[-6,6,-7,10],f1,f2,pred;
+ if(type==='essay-a'){range=[-4,5,-2,8];f1=x=>x*x;f2=x=>x+2;pred=(x,y)=>y>=f1(x)&&y<=f2(x)}
+ if(type==='essay-b'){range=[-8,5,-8,14];f1=x=>x*x+6*x+5;f2=x=>2*x+8;pred=(x,y)=>y>=f1(x)&&y>=f2(x)}
+ if(type==='essay-c'){range=[-5,5,-18,12];f1=x=>x*x+2*x-15;f2=x=>-x*x+2*x+8;pred=(x,y)=>y>=f1(x)&&y<=f2(x)}
+ const g=graphSetup(c,range);shade(g,pred);grid(g);curve(g,f1);curve(g,f2);
+}
+function drawProjectile(){
+ const c=$('projectileCanvas');if(!c)return;
+ const g=graphSetup(c,[0,3,-2,38]),fn=t=>-15*t*t+44*t+3;
+ grid(g);curve(g,fn,'#dc2626',false,3);
+ const t=Number($('timeSlider').value),h=fn(t);
+ g.ctx.fillStyle='#7c3aed';g.ctx.beginPath();g.ctx.arc(g.X(t),g.Y(h),6,0,Math.PI*2);g.ctx.fill();
+ $('timeValue').textContent=t.toLocaleString('id-ID',{minimumFractionDigits:2,maximumFractionDigits:2})+' s';
+ $('projectileValue').innerHTML=`Pada \\(t=${t.toFixed(2)}\\) detik, \\(h(t)=${h.toFixed(3)}\\) meter.`;
+ typeset($('projectileValue'));
+}
+function drawVisibleGraphs(){
+ document.querySelectorAll('[data-q1-opt]').forEach(c=>drawQ1Option(c,Number(c.dataset.q1Opt)));
+ document.querySelectorAll('[data-region-a]').forEach(drawRegionA);
+ document.querySelectorAll('[data-region-b]').forEach(drawRegionB);
+ document.querySelectorAll('[data-single-graph]').forEach(c=>{
+  if(c.dataset.singleGraph==='q6')drawQ6(c);
+  if(c.dataset.singleGraph==='q7')drawQ7(c);
+  if(c.dataset.singleGraph==='q8')drawQ8(c);
+ });
+ document.querySelectorAll('[data-q10-opt]').forEach(c=>drawQ10Option(c,Number(c.dataset.q10Opt)));
+ document.querySelectorAll('[data-essay-graph]').forEach(c=>drawEssay(c,c.dataset.essayGraph));
+ drawMultiGraph();
+ drawProjectile();
+}
+window.addEventListener('resize',()=>setTimeout(drawVisibleGraphs,100));
+
+// ---------------- RENDER MCQ ----------------
+function renderMCQ(){
+ $('mcqRoot').innerHTML=mcqData.map((q,i)=>{
+  let visual='',options='';
+  if(q.type==='graph5-incomplete'){
+   options=`<div class="graph-options">${[0,1,2,3,4].map(j=>`<label class="graph-option"><input type="radio" name="mcq_${i}" value="${j}"> ${String.fromCharCode(97+j)}.<canvas data-q1-opt="${j}" width="440" height="245"></canvas></label>`).join('')}</div>`;
+  }else if(q.type==='graph5-q10'){
+   options=`<div class="graph-options">${[0,1,2,3,4].map(j=>`<label class="graph-option"><input type="radio" name="mcq_${i}" value="${j}"> ${String.fromCharCode(97+j)}.<canvas data-q10-opt="${j}" width="440" height="245"></canvas></label>`).join('')}</div>`;
+  }else{
+   if(q.type==='region-a')visual='<div class="graph-box"><canvas data-region-a width="900" height="390"></canvas></div>';
+   if(q.type==='region-b')visual='<div class="graph-box"><canvas data-region-b width="900" height="390"></canvas></div>';
+   if(q.type==='single-graph')visual=`<div class="graph-box"><canvas data-single-graph="${q.graph}" width="900" height="390"></canvas></div>`;
+   options=q.o.map((o,j)=>`<label class="option"><input type="radio" name="mcq_${i}" value="${j}"> ${String.fromCharCode(97+j)}. ${o}</label>`).join('');
+  }
+  return `<article class="question" id="mcqCard${i}">
+   <span class="label ${q.type==='graph5-incomplete'?'warn':''}">Nomor ${q.n}${q.type==='graph5-incomplete'?' · Tidak dinilai':''}</span>
+   <h3>${q.q}</h3>${visual}${options}<div class="feedback" id="mcqFb${i}"></div>
+  </article>`;
+ }).join('');
+ typeset($('mcqRoot'));setTimeout(drawVisibleGraphs,80);
+}
+function gradeMCQ(){
+ let correct=0,total=0,blank=0,excluded=0;
+ mcqData.forEach((q,i)=>{
+  const card=$(`mcqCard${i}`),fb=$(`mcqFb${i}`),p=document.querySelector(`input[name="mcq_${i}"]:checked`);
+  card.classList.remove('correct','wrong');
+  if(q.type==='graph5-incomplete'){excluded++;fb.className='feedback info show';fb.innerHTML='<strong>Catatan:</strong> '+q.e}
+  else{
+   total++;
+   if(!p){blank++;card.classList.add('wrong');fb.className='feedback bad show';fb.innerHTML='<strong>Belum dijawab.</strong> '+q.e}
+   else if(Number(p.value)===q.a){correct++;card.classList.add('correct');fb.className='feedback good show';fb.innerHTML='<strong>Benar.</strong> '+q.e}
+   else{card.classList.add('wrong');fb.className='feedback bad show';fb.innerHTML='<strong>Belum tepat.</strong> '+q.e}
+  }
+  typeset(fb);
+ });
+ scores.mcq={correct,total,blank};$('mcqResult').innerHTML=`<strong>${correct}/${total} benar</strong> · ${blank} kosong · ${excluded} tidak dinilai.`;updateRecap();saveAll(false);
+}
+
+// ---------------- ESSAY ----------------
+function renderEssay(){
+ $('essayRoot').innerHTML=essayData.map((q,i)=>`<article class="essay-card">
+  <span class="label essay">Nomor ${q.id}</span><h3>${q.q}</h3>
+  <textarea id="essay_${i}" placeholder="Tuliskan analisis batas, titik potong, dan daerah yang diarsir..."></textarea>
+  <details ontoggle="drawVisibleGraphs()"><summary>Grafik dan Model Jawaban</summary><div>
+   <div class="graph-box"><canvas data-essay-graph="${q.graph}" width="900" height="390"></canvas></div>
+   <p>${q.ans}</p>
+  </div></details>
+ </article>`).join('');
+ typeset($('essayRoot'));
+}
+
+// ---------------- MULTI ----------------
+function renderMulti(){
+ $('multiRoot').innerHTML=`<article class="complex-card" id="multiCard"><h3>${multiData.q}</h3>
+  <div class="graph-box"><canvas id="multiGraph" width="900" height="390"></canvas></div>
+  <p class="muted"><strong>Pilih seluruh pernyataan yang benar.</strong></p>
+  ${multiData.o.map((o,i)=>`<label class="option"><input type="checkbox" name="multiOption" value="${i}"> ${i+1}. ${o}</label>`).join('')}
+  <div class="feedback" id="multiFb"></div>
+ </article>`;
+ typeset($('multiRoot'));setTimeout(drawMultiGraph,60);
+}
+function drawMultiGraph(){
+ const c=$('multiGraph');if(!c)return;const g=graphSetup(c,[-3,6,-6,6]);
+ shade(g,(x,y)=>y<=x-3&&y>=x*x-3*x-2);grid(g);curve(g,x=>x-3);curve(g,x=>x*x-3*x-2);
+}
+function sameArray(a,b){return a.length===b.length&&a.every((v,i)=>v===b[i])}
+function gradeMulti(){
+ const sel=[...document.querySelectorAll('input[name="multiOption"]:checked')].map(x=>Number(x.value)).sort((a,b)=>a-b);
+ const ans=[...multiData.a].sort((a,b)=>a-b),card=$('multiCard'),fb=$('multiFb');
+ card.classList.remove('correct','wrong');let correct=0,blank=sel.length===0?1:0;
+ if(blank){card.classList.add('wrong');fb.className='feedback bad show';fb.innerHTML='<strong>Belum dipilih.</strong> '+multiData.e}
+ else if(sameArray(sel,ans)){correct=1;card.classList.add('correct');fb.className='feedback good show';fb.innerHTML='<strong>Semua pilihan benar.</strong> '+multiData.e}
+ else{card.classList.add('wrong');fb.className='feedback bad show';fb.innerHTML='<strong>Belum tepat.</strong> '+multiData.e}
+ typeset(fb);scores.multi={correct,total:1,blank};$('multiResult').innerHTML=`<strong>${correct}/1 benar</strong>.`;updateRecap();saveAll(false);
+}
+
+// ---------------- MATCHING ----------------
+function renderMatching(){
+ $('matchingRoot').innerHTML=`<article class="match-card" id="matchingCard"><h3>${matchingData.q}</h3>
+  ${matchingData.rows.map((r,i)=>`<div class="match-row"><span>${i+1}. ${r}</span><select id="match_${i}"><option value="">Pilih jawaban</option>${matchingData.options.map((o,j)=>`<option value="${j}">${o}</option>`).join('')}</select></div>`).join('')}
+  <div class="feedback" id="matchingFb"></div>
+ </article>`;
+ typeset($('matchingRoot'));
+}
+function gradeMatching(){
+ let correct=0,blank=0;
+ matchingData.rows.forEach((_,i)=>{const e=$(`match_${i}`);if(e.value==='')blank++;else if(Number(e.value)===matchingData.a[i])correct++});
+ const card=$('matchingCard'),fb=$('matchingFb');card.classList.remove('correct','wrong');
+ if(correct===matchingData.rows.length){card.classList.add('correct');fb.className='feedback good show';fb.innerHTML='<strong>Semua pasangan benar.</strong> '+matchingData.e}
+ else{card.classList.add('wrong');fb.className='feedback bad show';fb.innerHTML=`<strong>${correct}/${matchingData.rows.length} pasangan benar.</strong> `+matchingData.e}
+ typeset(fb);scores.matching={correct,total:matchingData.rows.length,blank};$('matchingResult').innerHTML=`<strong>${correct}/${matchingData.rows.length} pasangan benar</strong> · ${blank} kosong.`;updateRecap();saveAll(false);
+}
+$('timeSlider').addEventListener('input',drawProjectile);
+
+// ---------------- TRUE FALSE ----------------
+function renderTF(){
+ $('tfRoot').innerHTML=tfGroups.map((g,gi)=>`<div class="card"><h3>${g.title}</h3>
+  <div class="tf-row tf-head"><span>Pernyataan</span><span>Benar</span><span>Salah</span></div>
+  ${g.items.map((q,i)=>`<div class="tf-row tf-card" id="tfCard${gi}_${i}">
+   <span><strong>${q.id}.</strong> ${q.text}<div class="feedback" id="tfFb${gi}_${i}"></div></span>
+   <label><input type="radio" name="tf_${gi}_${i}" value="true"> B</label>
+   <label><input type="radio" name="tf_${gi}_${i}" value="false"> S</label>
+  </div>`).join('')}
+ </div>`).join('');
+ typeset($('tfRoot'));
+}
+function gradeTF(){
+ let correct=0,total=0,blank=0;
+ tfGroups.forEach((g,gi)=>g.items.forEach((q,i)=>{
+  total++;const card=$(`tfCard${gi}_${i}`),fb=$(`tfFb${gi}_${i}`),p=document.querySelector(`input[name="tf_${gi}_${i}"]:checked`);
+  card.classList.remove('correct','wrong');
+  if(!p){blank++;card.classList.add('wrong');fb.className='feedback bad show';fb.innerHTML='<strong>Belum dijawab.</strong> '+q.e}
+  else if((p.value==='true')===q.a){correct++;card.classList.add('correct');fb.className='feedback good show';fb.innerHTML='<strong>Benar.</strong> '+q.e}
+  else{card.classList.add('wrong');fb.className='feedback bad show';fb.innerHTML='<strong>Belum tepat.</strong> '+q.e}
+  typeset(fb);
+ }));
+ scores.tf={correct,total,blank};$('tfResult').innerHTML=`<strong>${correct}/${total} benar</strong> · ${blank} kosong.`;updateRecap();saveAll(false);
+}
+
+// ---------------- STATE & RECAP ----------------
+function clearRoot(id){
+ const root=$(id);root.querySelectorAll('input').forEach(x=>x.checked=false);
+ root.querySelectorAll('.question').forEach(x=>x.classList.remove('correct','wrong'));
+ root.querySelectorAll('.feedback').forEach(x=>{x.className='feedback';x.innerHTML=''});
+ toast('Jawaban dibersihkan');
+}
+function updateRecap(){
+ const parts=['mcq','multi','matching','tf'];let correct=0,total=0,done=0;
+ parts.forEach(k=>{if(scores[k]){correct+=scores[k].correct;total+=scores[k].total;done++}});
+ const pct=total?Math.round(correct/total*100):0;
+ $('totalCorrect').textContent=correct;$('totalGraded').textContent=total;$('gradedParts').textContent=`${done}/4`;
+ $('totalScore').textContent=pct;$('scoreRing').style.background=`conic-gradient(var(--blue) ${pct*3.6}deg,var(--border) 0deg)`;
+ $('scoreTitle').textContent=done===4?(pct>=85?'Sangat baik':pct>=70?'Baik':pct>=55?'Cukup':'Perlu penguatan'):'Belum semua bagian dinilai';
+ $('scoreMessage').textContent=total?`Nilai objektif ${pct} dari ${total} butir/kelompok yang dinilai.`:'Nilai setiap bagian objektif.';
+ $('recapMCQ').textContent=scores.mcq?`${scores.mcq.correct}/${scores.mcq.total} benar; ${scores.mcq.blank} kosong.`:'Belum dinilai.';
+ $('recapMulti').textContent=scores.multi?`${scores.multi.correct}/1 benar.`:'Belum dinilai.';
+ $('recapMatching').textContent=scores.matching?`${scores.matching.correct}/${scores.matching.total} pasangan benar; ${scores.matching.blank} kosong.`:'Belum dinilai.';
+ $('recapTF').textContent=scores.tf?`${scores.tf.correct}/${scores.tf.total} benar; ${scores.tf.blank} kosong.`:'Belum dinilai.';
+}
+function serializeInputs(){
+ const data={};
+ document.querySelectorAll('input,select,textarea').forEach((el,idx)=>{
+  if(el.id==='searchMenu'||el.id==='timeSlider')return;
+  const key=el.name||el.id||`anon_${idx}`;
+  if(el.type==='radio'){if(el.checked)data[key]=el.value}
+  else if(el.type==='checkbox'){if(!data[key])data[key]=[];if(el.checked)data[key].push(el.value)}
+  else data[key]=el.value;
+ });
+ return data;
+}
+function restoreInputs(data){
+ if(!data)return;
+ document.querySelectorAll('input,select,textarea').forEach((el,idx)=>{
+  if(el.id==='searchMenu'||el.id==='timeSlider')return;
+  const key=el.name||el.id||`anon_${idx}`,val=data[key];
+  if(val===undefined)return;
+  if(el.type==='radio')el.checked=String(el.value)===String(val);
+  else if(el.type==='checkbox')el.checked=Array.isArray(val)&&val.map(String).includes(String(el.value));
+  else el.value=val;
+ });
+}
+function saveAll(show=true){
+ const state={completed,scores,theme:document.documentElement.dataset.theme||'light',inputs:serializeInputs()};
+ localStorage.setItem('interactive_inequalities_images',JSON.stringify(state));
+ if(show)toast('Jawaban dan progress tersimpan');
+}
+function loadAll(show=false){
+ const raw=localStorage.getItem('interactive_inequalities_images');
+ if(raw){try{const st=JSON.parse(raw);completed=Array.isArray(st.completed)?st.completed:[];scores=st.scores||scores;document.documentElement.dataset.theme=st.theme||'light';restoreInputs(st.inputs);updateProgress();updateRecap();if(show)toast('Data dimuat')}catch(e){if(show)toast('Data tidak dapat dimuat')}}
+ else if(show)toast('Belum ada data tersimpan');
+}
+function resetAll(){if(!confirm('Hapus seluruh jawaban, skor, dan progress?'))return;localStorage.removeItem('interactive_inequalities_images');location.reload()}
+
+document.documentElement.dataset.theme='light';
+renderMCQ();renderEssay();renderMulti();renderMatching();renderTF();loadAll(false);updateProgress();updateRecap();
+setTimeout(()=>{drawVisibleGraphs();drawMultiGraph();},120);
+</script>
+</body>
+</html>
